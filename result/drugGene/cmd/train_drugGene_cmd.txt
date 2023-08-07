@@ -1,0 +1,22 @@
+python -u train_drugGene.py 
+-onto ../data/drugGene_ont.txt
+-gene2id ../data/gene_item.txt
+-cell2id ../data/cell_item.txt
+-drug2id ../data/drug_item.txt
+-genotype ../data/cell_mutation.txt
+-exp ../data/cell_exp.txt
+-cn ../data/cell_cn.txt
+-fingerprint ../data/drug_print.txt
+-train ../data/drugGene_train_data.txt
+-test ../data/drugGene_val_data.txt
+-model ./MODEL
+-genotype_hiddens 6
+-drug_hiddens "100,50,6"
+-final_hiddens 6
+-epoch 80
+-batchsize 5000
+-cuda 0 > train_result.log
+
+execute:
+python -u train_drugGene.py -onto ../data/drugGene_ont.txt -gene2id ../data/gene_item.txt -cell2id ../data/cell_item.txt -drug2id ../data/drug_item.txt -genotype ../data/cell_mutation.txt -exp ../data/cell_exp.txt -cn ../data/cell_cn.txt -fingerprint ../data/drug_print.txt -train ../data/drugGene_train_data.txt -test ../data/drugGene_val_data.txt -model ./MODEL -genotype_hiddens 6 -drug_hiddens "100,50,6" -final_hiddens 6 -epoch 80 -batchsize 5000 -cuda 0 > train_result.log
+
