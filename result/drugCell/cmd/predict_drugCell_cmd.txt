@@ -1,0 +1,15 @@
+python -u predict_drugCell.py
+-gene2id ../data/gene_item.txt
+-cell2id ../data/cell_item.txt
+-drug2id ../data/drug_item.txt
+-genotype ../data/cell_mutation.txt
+-fingerprint ../data/drug_print.txt
+-result pre_result
+-predict ../data/drugGene_test_data.txt
+-load ../result/drugGene/model_drugCell.pt -cuda 0 > test_result_drugCell.log
+
+execute:
+python -u predict_drugCell.py -gene2id ../data/gene_item.txt -cell2id ../data/cell_item.txt -drug2id ../data/drug_item.txt -genotype ../data/cell_mutation.txt -fingerprint ../data/drug_print.txt -result pre_result -predict ../data/drugGene_test_data.txt -load ../result/drugCell/model_drugCell.pt -cuda 0 > test_result_drugCell.log
+
+
+
