@@ -1,0 +1,15 @@
+python -u predict_expBox.py
+-gene2id ../data/gene_item.txt
+-cell2id ../data/cell_item.txt
+-drug2id ../data/drug_item.txt
+-exp ../data/cell_exp.txt
+-fingerprint ../data/drug_print.txt
+-result pre_result
+-predict ../data/drugGene_test_data.txt
+-load ../result/expBox/model_expBox.pt -cuda 0 > test_result_expBox.log
+
+execute:
+python -u predict_expBox.py -gene2id ../data/gene_item.txt -cell2id ../data/cell_item.txt -drug2id ../data/drug_item.txt -exp ../data/cell_exp.txt -fingerprint ../data/drug_print.txt -result pre_result -predict ../data/drugGene_test_data.txt -load ../result/expBox/model_expBox.pt -cuda 0 > test_result_expBox.log
+
+
+
