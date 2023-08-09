@@ -1,0 +1,1 @@
+This directory stores the trained models and typically selects the model with the highest correlation on the validation set.
