@@ -7,7 +7,7 @@ code folder: This folder contains source code resources.
 
 result folder: Including various models.
 
-pictures folder: Contains resource pictures and related data for manuscripts.
+pictures folder: Contains resource pictures and related data for manuscript.
 
 Model file location: Users can extract relevant model files from the master branch(https://github.com/pangweixiong/DrugGene/tree/master).
 
