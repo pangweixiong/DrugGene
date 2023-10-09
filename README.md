@@ -9,7 +9,7 @@ result folder: Including various models.
 
 pictures folder: Contains resource pictures and related data for manuscripts.
 
-Model file location: Users can extract relevant model files from the master branch.
+Model file location: Users can extract relevant model files from the master branch(https://github.com/pangweixiong/DrugGene/tree/master).
 
 Users can extract the compressed model files stored in the master branch one by one to the corresponding folders, then switch to the directory where the code is located, 
 and execute the corresponding command file instructions in the result folder.
