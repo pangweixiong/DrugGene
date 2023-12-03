@@ -46,9 +46,11 @@ def train_model(root, term_size_map, term_direct_gene_map, dG, train_data, gene_
 	model.cuda(CUDA_ID)
 
 	optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate, betas=(0.9, 0.99), eps=1e-05)
+	con_fun = torch.optim.SGD(model.parameters(), lr=learning_rate, momentum=0, dampening=0, weight_decay=0, nesterov=False)
 	term_mask_map = create_term_mask(model.term_direct_gene_map, gene_dim)
 
 	optimizer.zero_grad()
+	con_fun.zero_grad()
 
 	for name, param in model.named_parameters():
 		term_name = name.split('_')[0]
