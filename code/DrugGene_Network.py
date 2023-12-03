@@ -26,6 +26,7 @@ class DrugGene_network(nn.Module):
 		final_input_size = num_hiddens_genotype + num_hiddens_drug[-1]
 		self.add_module('final_linear_layer', nn.Linear(final_input_size, num_hiddens_final))
 		self.add_module('final_batchnorm_layer', nn.BatchNorm1d(num_hiddens_final))
+		# self.add_module('final_gradient_layer', nn.functional.tanh(num_hiddens_final))
 		self.add_module('final_aux_linear_layer', nn.Linear(num_hiddens_final, 1))
 		self.add_module('final_linear_layer_output', nn.Linear(1, 1))
 
