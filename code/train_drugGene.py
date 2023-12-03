@@ -50,7 +50,7 @@ def train_model(root, term_size_map, term_direct_gene_map, dG, train_data, gene_
 	term_mask_map = create_term_mask(model.term_direct_gene_map, gene_dim)
 
 	optimizer.zero_grad()
-	con_fun.zero_grad()
+	# con_fun.zero_grad()
 
 	for name, param in model.named_parameters():
 		term_name = name.split('_')[0]
